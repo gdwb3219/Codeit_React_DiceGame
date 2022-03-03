@@ -8,5 +8,4 @@ function Button({ children, onClick, color = 'blue', className='' }) {
     </button>
   );
 }
-
 export default Button;
