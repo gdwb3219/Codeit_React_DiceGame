@@ -8,7 +8,7 @@ function Board({name, color, num, sum, gameHistory}) {
       <h2>총점</h2>
       <p>{sum}</p>
       <h2>기록</h2>
-      <p>{gameHistory.join(', ')}</p>
+      <p>{gameHistory && gameHistory.join(', ')}</p>
     </div>
   );
 }

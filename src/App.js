@@ -10,10 +10,10 @@ function random(n) {
 function App() {
   const [num, setNum] = useState(1);
   const [sum, setSum] = useState(0);
-  const [gameHistory, setGameHistory] = useState([]);  // 배열 (참조형이기 때문에)
+  const [gameHistory, setGameHistory] = useState([0]);  // 배열 (참조형이기 때문에)
   const [otherNum, setOtherNum] = useState(1);
   const [otherSum, setOtherSum] = useState(0);
-  const [otherGameHistory, setOtherGameHistory] = useState([]);  // 배열 (참조형이기 때문에)
+  const [otherGameHistory, setOtherGameHistory] = useState([0]);  // 배열 (참조형이기 때문에)
   
   const handleRollClick = () => {
     const nextNum = random(6);
@@ -29,10 +29,10 @@ function App() {
   const handleClearClick = () => {
     setNum(1);
     setSum(0);
-    setGameHistory([]);
+    setGameHistory([0]);
     setOtherNum(1);
     setOtherSum(0);
-    setOtherGameHistory([]);
+    setOtherGameHistory([0]);
   };
 
   return (
@@ -41,9 +41,8 @@ function App() {
         <Button className="App-button" color="blue" onClick={handleRollClick}>던지기</Button>
         <Button className="App-button" color="red" onClick={handleClearClick}>처음부터</Button>
       </div>
-      <div>
-        <Board name = "나" color="blue" num={num} sum={sum} gameHistory={gameHistory} />
-        <Board name = "상대" color="red" num={otherNum} sum={otherSum} gameHistory={otherGameHistory} />
+      <div className='buttonItem'>
+        <Board name = "나" color="blue" num={num} sum={sum} gameHistory={gameHistory} /><Board name = "상대" color="red" num={otherNum} sum={otherSum} gameHistory={otherGameHistory} />
       </div>
     </div>
   );
