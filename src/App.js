@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Board from './Board'
 import Button from './Button';
-import './App.css';
+// import './App.css';
 
 function random(n) {
   return Math.ceil(Math.random() * n);
