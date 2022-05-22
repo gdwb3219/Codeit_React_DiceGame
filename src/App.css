@@ -5,3 +5,9 @@
 .App .buttonItem {
   margin: 10px;
 }
+
+.ad-banner {
+  margin-top: 100px;
+  width: 320px;
+  height: 100px;
+}
